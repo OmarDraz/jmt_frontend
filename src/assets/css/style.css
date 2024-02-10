@@ -1,0 +1,320 @@
+/* ==============================================================================================================================
+														[ * Global Element ]
+===============================================================================================================================*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #222;
+  min-height: 100vh;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  overflow: hidden;
+}
+body .logo {
+  font-size: 45px;
+  text-align: center;
+}
+body .content {
+  margin-top: 100px;
+}
+
+/* ==============================================================================================================================
+														[ * Form Element ]
+===============================================================================================================================*/
+.jmt-attendee-form {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jmt-attendee-form form {
+  height: 650px;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+}
+.jmt-attendee-form form .inputGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.jmt-attendee-form form .inputGroup label {
+  margin-bottom: 10px;
+}
+.jmt-attendee-form form .inputGroup .input {
+  height: 50px;
+  outline: none;
+  border: none;
+  background-color: #222;
+  padding: 15px;
+}
+.jmt-attendee-form .waiting-screen {
+  min-height: 200px;
+}
+.jmt-attendee-form .waiting-screen img {
+  width: 180px;
+  margin-bottom: 20px;
+}
+.jmt-attendee-form .waiting-screen .time-elapsed, .jmt-attendee-form .waiting-screen .people {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.jmt-attendee-form .waiting-screen .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.jmt-attendee-form .waiting-screen .social-icons a {
+  font-size: 18px;
+  color: #A04422;
+}
+.jmt-attendee-form .waiting-screen .welcomeMessage {
+  text-align: center;
+  color: #A04422;
+  font-weight: 600;
+}
+
+/* ==============================================================================================================================
+														[ * Button Element ]
+===============================================================================================================================*/
+.jmt-button {
+  padding: 15px 40px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+.jmt-button:hover {
+  background-color: #0e0d0d;
+  box-shadow: 7px 10px 15px rgba(0, 0, 0, 0.2666666667);
+  transform: translateY(-2px);
+}
+
+/* ==============================================================================================================================
+														[ * Add Icon Element ]
+===============================================================================================================================*/
+.jmt-addIcon {
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  font-size: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.jmt-addIcon:hover {
+  background-color: #0e0d0d;
+  box-shadow: 7px 10px 15px rgba(0, 0, 0, 0.2666666667);
+  transform: translateY(-2px);
+}
+
+/* ==============================================================================================================================
+														[ * Patients Element ]
+===============================================================================================================================*/
+.jmt-patients h2 {
+  margin-bottom: 40px;
+}
+
+/* ==============================================================================================================================
+														[ * Dashboard Element ]
+===============================================================================================================================*/
+.jmt-dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+.jmt-dashboard .jmt-sidebar {
+  width: 300px;
+  background-color: #1a1a1a;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-shadow: -10px 4px 55px -10px rgba(0, 0, 0, 0.2666666667);
+  position: relative;
+  transition: all ease-in-out 0.3s;
+  z-index: 99;
+}
+.jmt-dashboard .jmt-sidebar.collapsed {
+  width: 0 !important;
+}
+.jmt-dashboard .jmt-sidebar.collapsed .logo, .jmt-dashboard .jmt-sidebar.collapsed .sidebar_links {
+  opacity: 0;
+}
+.jmt-dashboard .jmt-sidebar.collapsed .collapseBtn {
+  right: -20px;
+  border-radius: 0px 10px 10px 0px;
+  opacity: 1 !important;
+  z-index: 10;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2666666667);
+}
+.jmt-dashboard .jmt-sidebar.collapsed .collapseBtn svg {
+  transform: rotate(180deg);
+}
+.jmt-dashboard .jmt-sidebar .collapseBtn {
+  background-color: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 65px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 10px 0 0 10px;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2666666667);
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+.jmt-dashboard .jmt-sidebar .collapseBtn svg {
+  transition: all ease 1s;
+  height: 18px;
+  fill: #fff;
+}
+.jmt-dashboard .jmt-sidebar .logo {
+  width: 200px;
+  object-fit: cover;
+  transition: all ease-in-out 0.3s;
+  margin: 30px auto;
+}
+.jmt-dashboard .jmt-sidebar .sidebar_links {
+  transition: all ease-in-out 0.3s;
+}
+.jmt-dashboard .jmt-sidebar .sidebar_links .nav_link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  transition: ease-in-out 0.2s;
+  text-decoration: none;
+  color: #fff;
+  text-wrap: nowrap;
+}
+.jmt-dashboard .jmt-sidebar .sidebar_links .nav_link:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.jmt-dashboard .jmt-sidebar .sidebar_links .nav_link.active {
+  background: rgba(255, 255, 255, 0.08);
+}
+.jmt-dashboard .jmt-sidebar .nav_link.logout {
+  position: absolute;
+  cursor: pointer;
+  bottom: 0;
+  width: 100%;
+}
+.jmt-dashboard .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 991px) {
+  .jmt-dashboard .jmt-sidebar {
+    position: fixed;
+  }
+}
+/* ==============================================================================================================================
+														[ * Modal Element ]
+===============================================================================================================================*/
+.jmt-modal-container {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.jmt-modal-container .modal-content-large {
+  padding: 40px 60px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 7px 10px 15px rgba(0, 0, 0, 0.2666666667);
+  position: relative;
+}
+
+/* ==============================================================================================================================
+														[ * inout Element ]
+===============================================================================================================================*/
+.jmt-inputGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.jmt-inputGroup label {
+  margin-bottom: 10px;
+}
+.jmt-inputGroup .input {
+  height: 50px;
+  outline: none;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  padding: 15px;
+}
+
+/* ==============================================================================================================================
+														[ * Datatable Element ]
+===============================================================================================================================*/
+.jmt-data-table .css-ptkaw2-MuiDataGrid-root {
+  border-color: rgb(81, 81, 81);
+  color: #fff;
+}
+.jmt-data-table .css-ptkaw2-MuiDataGrid-root p {
+  margin: 0;
+}
+.jmt-data-table .css-ptkaw2-MuiDataGrid-root .MuiDataGrid-withBorderColor {
+  border-color: rgb(81, 81, 81);
+}
+.jmt-data-table .css-ptkaw2-MuiDataGrid-root .MuiCheckbox-root .MuiSvgIcon-root {
+  fill: #fff;
+}
+.jmt-data-table .css-ptkaw2-MuiDataGrid-root .MuiDataGrid-columnHeader--sorted .MuiDataGrid-iconButtonContainer button svg {
+  fill: #fff !important;
+}
+.jmt-data-table .css-ptkaw2-MuiDataGrid-root .MuiDataGrid-columnHeader:hover .MuiDataGrid-iconButtonContainer button svg {
+  fill: #fff;
+}
+.jmt-data-table .css-ptkaw2-MuiDataGrid-root .MuiDataGrid-columnHeader .MuiDataGrid-menuIcon .MuiSvgIcon-root {
+  fill: #fff;
+}
+.jmt-data-table .css-ptkaw2-MuiDataGrid-root .MuiDataGrid-columnHeader .MuiDataGrid-iconButtonContainer button svg {
+  fill: rgb(81, 81, 81);
+}
+.jmt-data-table .css-ptkaw2-MuiDataGrid-root .MuiDataGrid-columnSeparator .MuiSvgIcon-root {
+  fill: rgb(81, 81, 81);
+}
+.jmt-data-table .css-ptkaw2-MuiDataGrid-root .MuiDataGrid-footerContainer .css-rtrcn9-MuiTablePagination-root {
+  color: #fff;
+}
+.jmt-data-table .css-ptkaw2-MuiDataGrid-root .MuiDataGrid-footerContainer .css-rtrcn9-MuiTablePagination-root .css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon {
+  color: #fff;
+}
+.jmt-data-table .css-ptkaw2-MuiDataGrid-root .MuiDataGrid-footerContainer .css-rtrcn9-MuiTablePagination-root .MuiTablePagination-actions .MuiButtonBase-root.Mui-disabled {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/*# sourceMappingURL=style.css.map */
